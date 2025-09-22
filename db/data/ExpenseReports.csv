@@ -1,0 +1,4 @@
+ID;title;employee_ID;tripDate;status;totalAmount;currency
+101;Client Meeting;1;2025-09-10;NEW;0;USD
+102;Conference Travel;2;2025-09-12;APPROVED;450;USD
+103;Site Visit;3;2025-09-15;REJECTED;0;USD

@@ -1,0 +1,5 @@
+ID;report_ID;category;amount;currency;notes
+1001;101;Taxi;50;CAD;Airport to hotel
+1002;101;Meal;30;CAD;Dinner with client
+1003;102;Flight;400;CAD;NY to SF flight
+1004;102;Hotel;50;CAD;One night stay

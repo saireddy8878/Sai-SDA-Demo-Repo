@@ -1,0 +1,52 @@
+{
+  "name": "travel-expenses",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^9",
+    "express": "^4"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.13.0",
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9",
+    "@ui5/cli": "^4.0.26",
+    "cds-plugin-ui5": "^0.13.6",
+    "ui5-middleware-simpleproxy": "^3.5.1"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch": "cds watch",
+    "deploy:sqlite": "cds deploy --to sqlite:db.sqlite",
+    "watch-project_travel": "cds watch --open project_travel/index.html?sap-ui-xx-viewCache=false --livereload",
+    "watch-travel_fe": "cds watch --open travelfe/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-travel_rep": "cds watch --open travelrep/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-travel_exp": "cds watch --open travelexp/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      }
+    }
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/project_travel",
+    "app/travel_fe",
+    "app/travel_fe",
+    "app/travel_rep",
+    "app/travel_exp"
+  ]
+}
